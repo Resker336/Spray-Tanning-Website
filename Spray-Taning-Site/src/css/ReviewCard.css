@@ -1,0 +1,139 @@
+.review-card-container {
+  perspective: 1000px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.review-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.review-card-container.flipped .review-card {
+  transform: rotateY(180deg);
+}
+
+/* FRONT */
+.review-card-front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+.review-image-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.review-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s ease;
+  filter: brightness(1);
+}
+
+.review-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to top,
+    rgba(44, 24, 16, 0.95),
+    rgba(44, 24, 16, 0.7),
+    transparent
+  );
+  padding: 30px 20px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 10;
+}
+
+.review-content {
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+.review-stars,
+.review-text,
+.review-name {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.review-stars { font-size: 1.2rem; margin-bottom: 10px; }
+.review-text { color: #f5e6d3; font-size: 0.9rem; line-height: 1.5; }
+.review-name { color: #d4a574; font-size: 0.85rem; font-weight: 600; }
+
+/* DESKTOP HOVER */
+@media (hover: hover) and (pointer: fine) {
+  .review-card-front:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+  }
+
+  .review-card-front:hover .review-image {
+    filter: brightness(0.7);
+    transform: scale(0.98);
+  }
+
+  .review-card-front:hover .review-overlay {
+    opacity: 1;
+  }
+
+  .review-card-front:hover .review-content,
+  .review-card-front:hover .review-stars,
+  .review-card-front:hover .review-text,
+  .review-card-front:hover .review-name {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* BACK (Mobile Flip) */
+.review-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  background: linear-gradient(135deg, #6b4e3d, #4a3728);
+  border-radius: 16px;
+  padding: 30px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f5e6d3;
+  text-align: center;
+}
+
+.review-stars-back { font-size: 1.4rem; margin-bottom: 18px; }
+.review-name-back { color: #d4a574; font-weight: 600; margin-top: 12px; }
+.tap-hint { opacity: 0.6; font-size: 0.8rem; margin-top: 20px; }
+
+/* MOBILE: disable hover */
+@media (hover: none) {
+  .review-card-front:hover {
+    transform: none;
+  }
+  .review-card-front:hover .review-image {
+    filter: none; transform: none;
+  }
+  .review-overlay { display: none; }
+  .review-card-container:active .review-card-front {
+    transform: scale(0.98);
+  }
+}

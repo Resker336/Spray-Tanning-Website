@@ -66,6 +66,8 @@ function Footer() {
           <div className="social-icons">
             <a
               href="https://www.facebook.com/profile.php?id=100057061727479"
+              target="_blank"
+              rel="noopener noreferrer"
               className="social-icon facebook"
               aria-label="Facebook"
               title="Facebook"
@@ -74,6 +76,8 @@ function Footer() {
             </a>
             <a
               href="https://www.instagram.com/laurasspraytanningsienna/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="social-icon instagram"
               aria-label="Instagram"
               title="Instagram"

@@ -3,13 +3,29 @@ import '../css/Gallery.css';
 import ReviewCard from '../components/ReviewCard';
 import GalleryModal from '../components/GalleryModal';
 
+import SofiaJones from '../assets/images/Sofia_Jones.png';
+import Sofia2 from '../assets/images/Sofia2.png';
+import Amber from '../assets/images/Amber.png';
+import Amber2 from '../assets/images/Amber2.png';
+import Bride from '../assets/images/Bride.png'
+import Bride2 from '../assets/images/Bride2.png';
+import Bride3 from '../assets/images/Bride3.png';
+import Charlotte from '../assets/images/Charlotte.png';
+import Kate from '../assets/images/Kate.png';
+import Abbie from '../assets/images/Abbie.png';
+import Kaitlin from '../assets/images/Kaitlin.png'; 
+import Kaitlin2 from '../assets/images/Kaitlin2.png';
+import Wedding from '../assets/images/Wedding.png';
+import Kerry from '../assets/images/Kerry.png';
+
+
 function Gallery() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentReview, setCurrentReview] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
 
-   // Scroll to top on page load
+  // Scroll to top on page load
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -24,100 +40,81 @@ function Gallery() {
   const galleryItems = [
     {
       id: 1,
-      images: [
-        '/src/assets/images/Sofia_Jones.png',
-        '/src/assets/images/Sofia2.png'
-      ],
+      images: [SofiaJones, Sofia2],
       reviewerName: 'Sofia J.',
-      reviewerImage: '/src/assets/images/Sofia_Jones.png',
+      reviewerImage: SofiaJones,
       rating: 5,
       reviewText: 'Photos are in from the shoot a couple of weeks ago… If you’d told me a few years ago that I would ever do something like this I would have recoiled! But fast forward to today - 34 and feeling like I’m in the best shape of my life. Not just physically — but mentally, emotionally, and all around.',
       date: '18 MAY 2025'
     },
     {
       id: 2,
-      images: [
-        '/src/assets/images/Amber.png',
-        '/src/assets/images/Amber2.png'
-      ],
+      images: [Amber, Amber2],
       reviewerName: 'Amber',
-      reviewerImage: '/src/assets/images/Amber.png',
+      reviewerImage: Amber,
       rating: 5,
       reviewText: 'Laura is always really friendly and I wouldn’t go to anyone else for my tan! She’s always professional but also has a laugh to! I’ve used her for so many different types of events whether that be weddings, graduations or festivals and have always been really happy with the results and I recommend her to everyone xx',
       date: '21 JUL 2023'
     },
     {
       id: 3,
-      images: [
-        '/src/assets/images/Bride.png',
-        '/src/assets/images/Bride2.png',
-        '/src/assets/images/Bride3.png'
-      ],
+      images: [Bride, Bride2, Bride3],
       reviewerName: '',
-      reviewerImage: '/src/assets/images/Abbie.png',
+      reviewerImage: Bride,
       rating: 5,
       reviewText: 'Laura is amazing! The tan lasted over a week and faded so evenly. Will definitely be back!',
       date: '12 DEC 2023'
     },
     {
       id: 4,
-      images: [
-        '/src/assets/images/Charlotte.png'
-      ],
+      images: [Charlotte],
       reviewerName: 'Charlotte',
-      reviewerImage: '/src/assets/images/Charlotte.png',
+      reviewerImage: Charlotte,
       rating: 5,
       reviewText: 'Congratulations to my client Charlotte, she got married yesterday 💒. Charlotte had a spray tan with myself using sienna x FAST tan which she left on for 1 1/2 hours to give her a light glow. Absolutely beautiful 🎉',
       date: '30 APR 2022'
     },
     {
       id: 5,
-      images: ['/src/assets/images/Kate.png'],
+      images: [Kate],
       reviewerName: 'Kate',
-      reviewerImage: '/src/assets/images/Kate.png',
+      reviewerImage: Kate,
       rating: 5,
       reviewText: 'Thank you to my client Kate for sharing her photos with me, she made a beautiful bridesmaid. #siennaxfasttan #siennaxofficial',
       date: '27 APR 2024'
     },
     {
       id: 6,
-      images: [
-        '/src/assets/images/Abbie.png'
-      ],
+      images: [Abbie],
       reviewerName: 'Abbie',
-      reviewerImage: '/src/assets/images/Abbie.png',
+      reviewerImage: Abbie,
       rating: 5,
       reviewText: '*Thank you for the lovely review Abbie* As someone who has never had a spray tan before (but needed to cover a stubborn chest tan line less than 2 weeks before her wedding…!) I was a bit nervous about getting one, but Laura was absolutely amazing! She was super friendly and immediately put me at ease, and she recommended a lovely subtle colour which looked stunning and completely natural 😍 safe to say I felt like the most most beautiful bride! Thank you Laura! 💍.',
       date: '1 SEP 2023'
     },
     {
       id: 7,
-      images: [
-        '/src/assets/images/Kaitlin.png',
-        '/src/assets/images/Kaitlin2.png'
-      ],
+      images: [Kaitlin, Kaitlin2],
       reviewerName: 'Kaitlin',
-      reviewerImage: '/src/assets/images/Kaitlin.png',
+      reviewerImage: Kaitlin,
       rating: 5,
       reviewText: 'Best tan I’ve ever had! Beautiful colour, fades evenly and lasts ages! Also didnt transfer on my dress at all and my wedding day was a hot 🥵 one!! Always get so many compliments! Xxx',
       date: '7 July 2022'
     },
     {
       id: 8,
-      images: [
-        '/src/assets/images/Wedding.png',
-      ],
+      images: [Wedding],
       reviewerName: 'Sophie R.',
-      reviewerImage: '/src/assets/images/Wedding.png',
+      reviewerImage: Wedding,
       rating: 5,
       reviewText: 'Laura did an incredible job with my wedding spray tan. I had the Sienna X fast tan which I washed off after 3 hours. I was absolutely thrilled with the results. Not only is Laura a pro but she’s also super friendly and made me feel comfortable from the moment I walked in.',
       date: '8 JUN 2023'
     },
     {
       id: 9,
-      images: ['/src/assets/images/Kerry.png'],
-      reviewerName: 'Victoria N.',
-      reviewerImage: '/src/assets/images/Kerry.png',
+      images: [Kerry],
+      reviewerName: 'Kerry',
+      reviewerImage: Kerry,
       rating: 5,
       reviewText: 'I think you would all agree Kerry looks incredible at her maternity shoot. Kerry leaves her tan on the maximum time of 4 hrs for a deep golden tan. #siennaxexpresstan #spraytanaylesbury #beautyaylesbury',
       date: '11 NOV 2023'

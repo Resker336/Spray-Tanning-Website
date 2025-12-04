@@ -2,47 +2,54 @@ import { useState, useRef, useEffect } from 'react';
 import ReviewCard from '../components/ReviewCard.jsx';
 import '../css/ReviewGallery.css';
 
+import Kerry from '../assets/images/Kerry.png'
+import Amber from '../assets/images/Amber.png'
+import Abbie from '../assets/images/Abbie.png'
+import Bride from '../assets/images/Bride.png'
+import Kate from '../assets/images/Kate.png'
+import Sofia from '../assets/images/Sofia_Jones.png'
+
 function ReviewGallery() {
   const reviews = [
     {
       id: 1,
-      image: '/src/assets/images/Kerry.png',
-      name: 'Sarah M.',
+      image: [Kerry],
+      name: 'Kerry',
       rating: 5,
       reviewText: 'Absolutely stunning results! Laura made me feel so comfortable and the tan looks incredibly natural. Best spray tan I\'ve ever had!'
     },
     {
       id: 2,
-      image: '/src/assets/images/Amber.png',
-      name: 'Emma L.',
+      image: [Amber],
+      name: 'Amber.',
       rating: 5,
       reviewText: 'Professional, friendly service and a flawless golden glow. I get compliments every time! Highly recommend.'
     },
     {
       id: 3,
-      image: '/src/assets/images/Abbie.png',
-      name: 'Jessica T.',
+      image: [Abbie],
+      name: 'Abbie',
       rating: 5,
       reviewText: 'Laura is amazing! The tan lasted over a week and faded so evenly. Will definitely be back!'
     },
     {
       id: 4,
-      image: '/src/assets/images/Bride.png',
-      name: 'Rachel D.',
+      image: [Bride],
+      name: '',
       rating: 5,
       reviewText: 'Finally found someone who gets the perfect shade for my skin tone. No streaks, no orange - just gorgeous!'
     },
     {
       id: 5,
-      image: '/src/assets/images/Kate.png',
-      name: 'Amanda K.',
+      image: [Kate],
+      name: 'Kate',
       rating: 5,
       reviewText: 'The most natural-looking spray tan ever. Laura\'s technique is perfection and she uses the best products.'
     },
     {
       id: 6,
-      image: '/src/assets/images/Sofia_Jones.png',
-      name: 'Michelle B.',
+      image: [Sofia],
+      name: 'Sofia',
       rating: 5,
       reviewText: 'Love my glow! Professional setup, relaxing atmosphere, and stunning results. Worth every penny!'
     }

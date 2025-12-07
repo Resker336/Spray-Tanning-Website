@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <style>
+    .white { fill: white; }
+    .logo-text { font-family: Arial, sans-serif; text-anchor: middle; }
+  </style>
+  
+  <!-- Left leaf -->
+  <path class="white" d="M 100 80 Q 90 60, 95 40 Q 100 30, 110 35 Q 115 45, 110 65 Q 105 75, 100 80 Z"/>
+  
+  <!-- Right leaf -->
+  <path class="white" d="M 150 90 Q 165 75, 175 70 Q 185 68, 190 75 Q 190 85, 180 95 Q 170 100, 160 98 Q 155 95, 150 90 Z"/>
+  
+  <!-- Stem connecting leaves -->
+  <path class="white" d="M 110 65 Q 130 75, 150 85" stroke="white" stroke-width="2" fill="none"/>
+  
+  <!-- Main text: Laura's spray tanning -->
+  <text class="white logo-text" x="150" y="140" font-size="22" font-weight="300">Laura's spray tanning</text>
+  
+  <!-- Subtitle: sienna x -->
+  <text class="white logo-text" x="150" y="165" font-size="18" font-weight="300">sienna x</text>
+  
+  <!-- Website URL -->
+  <text class="white logo-text" x="150" y="190" font-size="11">www.spraytanninglaylesbury.co.uk</text>
+  
+  <!-- LM initials -->
+  <text class="white" x="270" y="285" font-size="14" font-weight="bold">LM</text>
+</svg>
